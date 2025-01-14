@@ -217,7 +217,7 @@ python detect.py --source './data/images/horses.jpg' --img 640 --device 0 --weig
 
 ```
 @article{wang2024yolov9,
-  title={{ YOLOv9 }: Learning What You Want to Learn Using Programmable Gradient Information},
+  title={{ YOLOv9 }},
   author={Wang, Chien-Yao  and Liao, Hong-Yuan Mark},
   booktitle={arXiv preprint arXiv:2402.13616},
   year={2024}
