@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection from CSE-D </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-page">
+
+        <div class="side-line"></div>
+
+        <div class="side-bar">
+
+            <form id="upload-form" method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.file(id='file', style='display: none;') }}
+                <span class="circle" id="upload-icon">
+                    <i class="material-icons" style="font-size: 36px; color: white;">file_upload</i>
+                </span>
+            </form>
+            <img src="https://img.freepik.com/premium-photo/world-woman-white-background_1000823-200484.jpg?w=1380" height="100vh" width="100vw"/>
+            <span class="circle blue-circle" id="detect-icon">
+                <i class="material-icons" style="font-size: 36px; color: white;">play_arrow</i>
+            </span>
+
+        </div>
+
+        <div class="right-panel">
+
+            <div class="header">
+
+                <div class="logo-container">
+                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/DkZGVTX/R.gif" width=60 height = 60 alt="R" border="0"></a>
+                </div>
+                    <h1>SRI VASAVI COLLEGE PROJECT FROM CSE-D</h1>
+
+            </div>
+            <!-- Tablet Container -->
+            <div class="tablet-container">
+                <img id="tablet-image" src="{{ url_for('static', filename='tablet.png') }}" width="800" height="639" alt="">
+                <img id="image-main" src="{{ url_for('detections') }}" width="740" height="540" alt="">
+                <canvas id="main-canvas" width="740" height="540">
+
+
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+-
+    <!-- Link to the JS File -->
+<!--    <script src="{{ url_for('static', filename='main.js') }}"></script>-->
+<!-- Add JavaScript to handle click events -->
+    <script>
+        document.getElementById('upload-icon').addEventListener('click', function() {
+            document.getElementById('file').click();
+        });
+
+        let image=document.getElementById('detect-icon').addEventListener('click', function() {
+            document.getElementById('upload-form').submit();
+        });
+
+    </script>
+
+</body>
+</html>
