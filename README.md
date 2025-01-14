@@ -226,7 +226,7 @@ python detect.py --source './data/images/horses.jpg' --img 640 --device 0 --weig
 
 ```
 @article{chang2023yolor,
-  title={{ YOLOR }-Based Multi-Task Learning},
+  title={{ YOLOR }},
   author={Chang, Hung-Shuo and Wang, Chien-Yao and Wang, Richard Robert and Chou, Gene and Liao, Hong-Yuan Mark},
   journal={arXiv preprint arXiv:2309.16921},
   year={2023}
